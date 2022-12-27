@@ -235,8 +235,8 @@ int main()
 
 经过调研后我们知道，这个问题是由于上述代码中的 **array** 在初始化发生的，而究其根因是因为 **{}** 的存在，会促使编译器进行聚合初始化（aggregate initialization）,关于聚合初始化的细节这里就不作赘述，感兴趣的同学可以参考链接 https://en.cppreference.com/w/cpp/language/aggregate_initialization，或自行搜索关键词。
 
-同时，这个[关于聚合初始化的问题](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=92385)，[GCC12.0 已经修复这个问题](https://stackoverflow.com/questions/37260097/stdarray-with-aggregate-initialization-on-g-generates-huge-code)。这也就是为什么 [GCC12.0 的编译速度比 GCC 9.0 要快的原因
-Compiler Explorer](https://godbolt.org) 上代码编译的对比结果如下，可以明显看到 GCC12.0 编译后的代码量要精简很多，去除了 GCC 9.0 里大量重复的寄存器值的复制和搬移 mov DWORD PTR \[rsp+4\], 0x00000000。
+同时，这个[关于聚合初始化的问题](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=92385)，[GCC12.0 已经修复这个问题](https://stackoverflow.com/questions/37260097/stdarray-with-aggregate-initialization-on-g-generates-huge-code)。这也就是为什么 GCC12.0 的编译速度比 GCC 9.0 要快的原因
+[Compiler Explorer](https://godbolt.org) 上代码编译的对比结果如下，可以明显看到 GCC12.0 编译后的代码量要精简很多，去除了 GCC 9.0 里大量重复的寄存器值的复制和搬移 mov DWORD PTR \[rsp+4\], 0x00000000。
 
 ![image-20221227224323254](./img/Compiler%20optimization%20techniques/image-20221227224323254.png)
 

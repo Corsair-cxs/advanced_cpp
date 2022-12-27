@@ -1,0 +1,1 @@
+https://www.geeksforgeeks.org/type-inference-in-c-auto-and-decltype/

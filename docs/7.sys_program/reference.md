@@ -1,0 +1,8 @@
+- Operating Systems:Three Easy Pieces:
+  - https://pages.cs.wisc.edu/~remzi/OSTEP/Chinese/toc.pdf
+- cs350: 
+  - https://student.cs.uwaterloo.ca/~cs350/F21/notes/
+  - https://student.cs.uwaterloo.ca/~cs350/F21/reading.shtml
+    - ![image-20221229233209436](./img/reference/image-20221229233209436.png)
+  - https://student.cs.uwaterloo.ca/~cs350/common/Larus-Mips.pdf
+  - 虚拟地址转换 https://student.cs.uwaterloo.ca/~cs350/common/Paging-Flowchart.pdf

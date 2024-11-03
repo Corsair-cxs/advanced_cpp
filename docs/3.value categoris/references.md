@@ -1,0 +1,1 @@
+[A Taxonomy of Expression Value Categories](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2010/n3055.pdf)
